@@ -35,7 +35,8 @@ defmodule Gdrive.MixProject do
     [
       {:goth, "~> 0.8.2"},
       {:httpoison, "~> 1.0"},
-      {:mime, "~> 1.2"}
+      {:mime, "~> 1.2"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end
