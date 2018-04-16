@@ -7,7 +7,19 @@ defmodule Gdrive.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+      description: "Elixir client for Google drive API that support upload file"
+    ]
+  end
+
+  def package do
+    [
+      name: :gdrive,
+      files: ["lib", "mix.exs", "README*"],
+      maintainers: ["Dung Nguyen"],
+      licenses: ["MIT"],
+      links: %{"Github" => "https://github.com/bluzky/gdrive"}
     ]
   end
 
@@ -21,8 +33,6 @@ defmodule Gdrive.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       {:goth, "~> 0.8.2"},
       {:httpoison, "~> 1.0"},
       {:mime, "~> 1.2"}
