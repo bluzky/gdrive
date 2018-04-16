@@ -24,9 +24,8 @@ defmodule Gdrive.MixProject do
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       {:goth, "~> 0.8.2"},
-      {:tesla, "~> 1.0.0-beta.1"},
-      {:jason, ">= 1.0.0"},
-      {:httpoison, "~> 1.0"}
+      {:httpoison, "~> 1.0"},
+      {:mime, "~> 1.2"}
     ]
   end
 end
