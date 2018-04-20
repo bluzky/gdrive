@@ -1,6 +1,33 @@
 defmodule Gdrive.Api.File do
   import Gdrive.Connection
 
+  @moduledoc """
+  Support Google drive Files api [here](https://developers.google.com/drive/v3/reference/files)
+
+  Support all query params.
+
+  ## Send a request
+
+  1. Create a connection
+
+      iex> connection = Connection.new(fn scopes ->
+               {:ok, token} = Goth.Token.for_scope(Enum.join(your_scopes_list, " "))
+                token.token
+          end)
+
+      or
+
+      `iex> connection = Connection.new(gg_token)`
+
+  2. Send a request
+
+      {status, data} = Gdrive.Api.File.list(
+                connection,
+                fields: "files/parents,files/webContentLink,files/id,files/name,files/kind"
+            )
+
+  """
+
   defp standard_params() do
     %{
       :alt => :query,
