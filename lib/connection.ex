@@ -1,6 +1,10 @@
 defmodule Gdrive.Connection do
   use HTTPoison.Base
 
+  @moduledoc """
+  A requrest builder for API connection
+  """
+
   defstruct headers: [{"User-Agent", "Elixir"}],
             url: "",
             method: :get,
