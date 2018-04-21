@@ -107,8 +107,7 @@ defmodule Gdrive do
 
   ## Examples
 
-      iex> Gdrive.copy("aKDnadYQsdfPD", "sIkasWEdENsdEPN")
-
+      Gdrive.copy("aKDnadYQsdfPD", "sIkasWEdENsdEPN")
   """
   def copy(id, new_folder_id, opts \\ []) do
     connection

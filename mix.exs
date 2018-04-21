@@ -38,7 +38,7 @@ defmodule Gdrive.MixProject do
   defp deps do
     [
       {:goth, "~> 0.8.2", optional: true},
-      {:httpoison, "~> 1.0"},
+      {:httpoison, "~> 1.1.0", override: true},
       {:mime, "~> 1.2"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
