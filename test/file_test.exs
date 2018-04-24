@@ -15,7 +15,7 @@ defmodule GdriveTest do
     assert status == :ok
   end
 
-  @tag :skip
+  #@tag :skip
   test "list api" do
     connection =
       Connection.new(fn scopes ->
