@@ -24,13 +24,13 @@ defmodule Gdrive do
 
   ## Examples
 
-      iex> Gdrive.create("Hello.txt")
+      Gdrive.create("Hello.txt")
 
   You can create file under a folder
 
   ## Examples
 
-      iex> Gdrive.create("hello.txt", parents: ["parent_folder_ids"])
+      Gdrive.create("hello.txt", parents: ["parent_folder_ids"])
 
   """
   def create(name, opts \\ []) do
@@ -48,7 +48,7 @@ defmodule Gdrive do
 
   ## Examples
 
-      iex> Gdrive.upload("/user/test/Hello.txt", name: "goodbye.txt")
+      Gdrive.upload("/user/test/Hello.txt", name: "goodbye.txt")
 
   """
   def upload(path, opts \\ []) do
@@ -64,7 +64,7 @@ defmodule Gdrive do
 
   ## Examples
 
-      iex> Gdrive.create_folder("secret")
+      Gdrive.create_folder("secret")
 
   """
   def create_folder(name) do
@@ -90,7 +90,7 @@ defmodule Gdrive do
 
   ## Examples
 
-      iex> Gdrive.rename("aKDnadYQsdfPD", "new folder")
+      Gdrive.rename("aKDnadYQsdfPD", "new folder")
 
   """
   def rename(id, new_name, opts \\ []) do
@@ -108,6 +108,7 @@ defmodule Gdrive do
   ## Examples
 
       Gdrive.copy("aKDnadYQsdfPD", "sIkasWEdENsdEPN")
+
   """
   def copy(id, new_folder_id, opts \\ []) do
     connection
@@ -122,7 +123,7 @@ defmodule Gdrive do
 
   ## Examples
 
-      iex> Gdrive.delete("aKDnadYQsdfPD")
+      Gdrive.delete("aKDnadYQsdfPD")
 
   """
   def delete(id, opts \\ []) do
@@ -138,7 +139,7 @@ defmodule Gdrive do
 
   ## Examples
 
-      iex> Gdrive.get("aKDnadYQsdfPD")
+      Gdrive.get("aKDnadYQsdfPD")
 
   """
   def get(id, opts \\ []) do
@@ -154,7 +155,7 @@ defmodule Gdrive do
 
   ## Examples
 
-      iex> Gdrive.list("name='hello.txt'")
+      Gdrive.list("name='hello.txt'")
 
   """
   def list(query, opts \\ []) do
